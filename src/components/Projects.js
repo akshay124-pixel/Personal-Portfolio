@@ -74,19 +74,22 @@ function Projects() {
                     alt=""
                     className="project-image"
                   />
-                  <h3>iNoteBook</h3>
+                  <h3>Tecca</h3>
                   <p>
-                    iNotebook is a cloud-based React application designed for
-                    secure note storage, featuring user-specific login access
-                    for efficient data management and accessibility.
+                    "Tecca" is a Next.js project featuring API data fetching for
+                    comprehensive Netflix series information. Additionally, it
+                    includes a contact form for users to submit inquiries, with
+                    data seamlessly stored in a database. This integration of
+                    Next.js offers users a seamless experience, combining
+                    real-time updates with interactive engagement.
                   </p>
-                  <button className="cssbuttons-io-button">
-                    <a
-                      href="https://github.com/akshay124-pixel/iNoteBook"
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      View Project
-                    </a>
+                  <button
+                    className="cssbuttons-io-button"
+                    onClick={() =>
+                      (window.location.href = "https://tecca.vercel.app/")
+                    }
+                  >
+                    View Project
                     <div class="icon">
                       <svg
                         height="24"
