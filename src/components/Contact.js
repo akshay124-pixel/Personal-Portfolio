@@ -30,7 +30,7 @@ function Contact() {
               <br></br>
 
               <div className="contact-details">
-                <ol>
+                <ol style={{ listStyleType: "none", padding: 0, margin: 0 }}>
                   <li>
                     <strong>Name:</strong> Akshay Pratap Singh
                   </li>
@@ -64,28 +64,29 @@ function Contact() {
                       akshay124-pixel
                     </a>
                   </li>
-                  <br />
-                  {/* Button */}
 
-                  <Link to="/message" style={{ textDecoration: "none" }}>
-                    <button className="cssbuttons-io-button">
-                      Message
-                      <div class="icon">
-                        <svg
-                          height="24"
-                          width="24"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M0 0h24v24H0z" fill="none"></path>
-                          <path
-                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </div>
-                    </button>
-                  </Link>
+                  {/* Button */}
+                  <div className="style-btn" style={{ marginTop: "8px" }}>
+                    <Link to="/message" style={{ textDecoration: "none" }}>
+                      <button className="cssbuttons-io-button">
+                        Message
+                        <div class="icon">
+                          <svg
+                            height="24"
+                            width="24"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                              d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                      </button>
+                    </Link>
+                  </div>
 
                   {/* Button End */}
                 </ol>
