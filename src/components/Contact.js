@@ -67,7 +67,7 @@ function Contact() {
                   <br />
                   {/* Button */}
 
-                  <Link to="/message">
+                  <Link to="/message" style={{ textDecoration: "none" }}>
                     <button className="cssbuttons-io-button">
                       Message
                       <div class="icon">
@@ -86,6 +86,7 @@ function Contact() {
                       </div>
                     </button>
                   </Link>
+
                   {/* Button End */}
                 </ol>
               </div>
