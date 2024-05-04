@@ -1,68 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Home.css";
-import { Link } from "react-router-dom";
 
 function Contact() {
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("darkMode") === "enabled"
-  );
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("dark-mode");
-      localStorage.setItem("darkMode", "enabled");
-    } else {
-      document.body.classList.remove("dark-mode");
-      localStorage.setItem("darkMode", "disabled");
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <div>
-      <header className="container">
-        <div className="page-header">
-          <div className="logo">
-            <Link to="/">Contact</Link>
-          </div>
-          <input type="checkbox" id="click" />
-
-          <label htmlFor="click" className="mainicon">
-            <div className="menu">
-              <i className={isDarkMode ? "bx bxs-sun" : "bx bx-menu"}></i>
-            </div>
-          </label>
-          <ul>
-            <li>
-              <Link to="/Home">Home</Link>
-            </li>
-            <li>
-              <Link to="/Projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/Skills">Skills</Link>
-            </li>
-            <li>
-              <Link to="/Contact" className="active">
-                Contact
-              </Link>
-            </li>
-          </ul>
-          <label className="mode">
-            <input
-              type="checkbox"
-              id="darkModeToggle"
-              checked={isDarkMode}
-              onChange={toggleDarkMode}
-            />
-            <i className={isDarkMode ? "bx bxs-sun" : "bx bxs-moon"}></i>
-          </label>
-        </div>
-      </header>
-
       <div className="contact">
         <section className="container">
           <div className="main">
@@ -126,13 +67,10 @@ function Contact() {
                 </ol>
               </div>
             </div>
+
             <div className="img-sec">
-              <div className="images">
-                <img
-                  src="https://cdn.pixabay.com/photo/2023/10/18/22/48/cadillac-8325221_640.png"
-                  alt=""
-                  className="img-w"
-                />
+              <div className="images1">
+                <img src="location.svg" alt="" className="img-w" />
               </div>
             </div>
           </div>

@@ -1,72 +1,58 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+
 import "./Home.css";
 import "./button.css";
 function Projects() {
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("darkMode") === "enabled"
-  );
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("dark-mode");
-      localStorage.setItem("darkMode", "enabled");
-    } else {
-      document.body.classList.remove("dark-mode");
-      localStorage.setItem("darkMode", "disabled");
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <div>
-      <header className="container">
-        <div className="page-header">
-          <div className="logo">
-            <Link to="/">Projects</Link>
-          </div>
-          <input type="checkbox" id="click" />
-
-          <label htmlFor="click" className="mainicon">
-            <div className="menu">
-              <i className={isDarkMode ? "bx bxs-sun" : "bx bx-menu"}></i>
-            </div>
-          </label>
-          <ul>
-            <li key="home">
-              <Link to="/">Home</Link>
-            </li>
-            <li key="projects">
-              <Link to="/Projects" className="active">
-                Projects
-              </Link>
-            </li>
-            <li key="skills">
-              <Link to="/Skills">Skills</Link>
-            </li>
-            <li key="contact">
-              <Link to="/Contact">Contact</Link>
-            </li>
-          </ul>
-          <label className="mode">
-            <input
-              type="checkbox"
-              id="darkModeToggle"
-              checked={isDarkMode}
-              onChange={toggleDarkMode}
-            />
-            <i className={isDarkMode ? "bx bxs-sun" : "bx bxs-moon"}></i>
-          </label>
-        </div>
-      </header>
-
       <section className="container">
         <div className="main">
           <div className="detail">
             <div className="projects-container">
+              <div className="project-column">
+                <div className="project-card">
+                  <img
+                    src="project-image-2.jpg" // Replace with your project image
+                    alt=""
+                    className="project-image"
+                  />
+                  <h3>Novo</h3>
+                  <p>
+                    Novo is a dynamic web platform built with the MERN stack,
+                    comprising MongoDB, Express.js, React.js, and Node.js. It
+                    integrates MongoDB for efficient data management, Express.js
+                    for server-side operations, React.js for interactive user
+                    interfaces, and Node.js for runtime execution. Novo embodies
+                    the complete basics of the MERN stack, delivering a seamless
+                    and scalable web experience with its robust architecture and
+                    comprehensive feature set.
+                  </p>
+                  <br />
+                  <button
+                    className="cssbuttons-io-button"
+                    onClick={() =>
+                      (window.location.href =
+                        "https://novo-one-theta.vercel.app/")
+                    }
+                  >
+                    View Project
+                    <div class="icon">
+                      <svg
+                        height="24"
+                        width="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                          d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
               <div className="project-column">
                 <div className="project-card">
                   <img
@@ -83,6 +69,7 @@ function Projects() {
                     Next.js offers users a seamless experience, combining
                     real-time updates with interactive engagement.
                   </p>
+                  <br />
                   <button
                     className="cssbuttons-io-button"
                     onClick={() =>
@@ -115,19 +102,24 @@ function Projects() {
                     alt=""
                     className="project-image"
                   />
-                  <h3>News-App</h3>
+                  <h3>Brand Page</h3>
                   <p>
-                    React.js-based news app that delivers real-time updates,
-                    personalized content, and user-friendly features for
-                    seamless news consumption and engagement.
+                    Experience seamless brand interaction with our dynamic
+                    website crafted using React.js, HTML, CSS, JavaScript, and
+                    Bootstrap. Immerse yourself in stunning visuals, intuitive
+                    navigation, and responsive design as you explore our latest
+                    offerings. Engage with personalized content and discover a
+                    new level of brand connection.
                   </p>
-                  <button className="cssbuttons-io-button">
-                    <a
-                      href="https://github.com/akshay124-pixel/News-App"
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      View Project
-                    </a>
+                  <br />
+                  <button
+                    className="cssbuttons-io-button"
+                    onClick={() =>
+                      (window.location.href =
+                        "https://brand-page-nikee.vercel.app//")
+                    }
+                  >
+                    View Project
                     <div class="icon">
                       <svg
                         height="24"
@@ -152,21 +144,66 @@ function Projects() {
                     alt=""
                     className="project-image"
                   />
-                  <h3>Porfolio</h3>
+                  <h3>Weatherfiy</h3>
+                  <p>
+                    Weatherify is a sleek weather application crafted with
+                    React.js, offering users a seamless and intuitive
+                    experience. It provides real-time weather updates with a
+                    minimalist design and responsive interface, ensuring
+                    effortless navigation. With its React-powered frontend,
+                    Weatherify delivers accurate forecasts and an engaging user
+                    experience.
+                  </p>
+                  <br />
+                  <button
+                    className="cssbuttons-io-button"
+                    onClick={() =>
+                      (window.location.href = "https://weatherfiy.vercel.app/")
+                    }
+                  >
+                    View Project
+                    <div class="icon">
+                      <svg
+                        height="24"
+                        width="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                          d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <div className="project-column">
+                <div className="project-card">
+                  <img
+                    src="project-image-2.jpg" // Replace with your project image
+                    alt=""
+                    className="project-image"
+                  />
+                  <h3>Porfolio Using React</h3>
                   <p>
                     Create a stunning personal portfolio with React.js,
                     showcasing our skills and achievements in a dynamic and
                     interactive way. Impress visitors with a modern and
                     responsive design that reflects your unique professional
                     identity.
-                  </p>{" "}
-                  <button className="cssbuttons-io-button">
-                    <a
-                      href="https://github.com/akshay124-pixel/Portfolio"
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      View Project
-                    </a>
+                  </p>
+                  <br />
+                  <button
+                    className="cssbuttons-io-button"
+                    onClick={() =>
+                      (window.location.href =
+                        "https://port-folio-using-react.vercel.app/")
+                    }
+                  >
+                    View Project
                     <div class="icon">
                       <svg
                         height="24"
@@ -186,15 +223,16 @@ function Projects() {
               </div>
             </div>
           </div>
-          <div className="img-sec">
-            <div className="images">
+          {/* <div className="img-sec">
+            <div className="images1">
               <img
-                src="https://cdn.pixabay.com/photo/2017/01/27/13/17/sports-2013045_640.png"
+                src="Project.svg"
                 alt=""
                 className="img-w"
+                style={{ position: "fixed" }}
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

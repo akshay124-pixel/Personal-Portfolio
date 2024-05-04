@@ -1,68 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Home.css";
-import { Link } from "react-router-dom";
 
 function Skills() {
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("darkMode") === "enabled"
-  );
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("dark-mode");
-      localStorage.setItem("darkMode", "enabled");
-    } else {
-      document.body.classList.remove("dark-mode");
-      localStorage.setItem("darkMode", "disabled");
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <div>
-      <header className="container">
-        <div className="page-header">
-          <div className="logo">
-            <Link to="/">Portfolio</Link>
-          </div>
-          <input type="checkbox" id="click" />
-
-          <label htmlFor="click" className="mainicon">
-            <div className="menu">
-              <i className={isDarkMode ? "bx bxs-sun" : "bx bx-menu"}></i>
-            </div>
-          </label>
-          <ul>
-            <li>
-              <Link to="/" className="active">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/Projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/Skills">Skills</Link>
-            </li>
-            <li>
-              <Link to="/Contact">Contact</Link>
-            </li>
-          </ul>
-          <label className="mode">
-            <input
-              type="checkbox"
-              id="darkModeToggle"
-              checked={isDarkMode}
-              onChange={toggleDarkMode}
-            />
-            <i className={isDarkMode ? "bx bxs-sun" : "bx bxs-moon"}></i>
-          </label>
-        </div>
-      </header>
-
       <section className="container">
         <div className="main">
           <div className="detail">
@@ -99,11 +40,7 @@ function Skills() {
           </div>
           <div className="img-sec">
             <div className="images">
-              <img
-                src="https://cdn.pixabay.com/photo/2017/06/21/18/44/exam-2428208_1280.png"
-                alt=""
-                className="img-w"
-              />
+              <img src="Skills.svg" alt="" className="img-w" />
             </div>
           </div>
         </div>
