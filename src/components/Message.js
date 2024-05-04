@@ -15,6 +15,7 @@ const Message = () => {
         () => {
           console.log("SUCCESS!");
           toast.success("Message sent successfully!");
+          form.current.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);

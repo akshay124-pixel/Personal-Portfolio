@@ -43,9 +43,7 @@ function Navbar() {
             <li>
               <Link to="/Skills">Skills</Link>
             </li>
-            <li>
-              <Link to="/Message">Message</Link>
-            </li>
+
             <li>
               <Link to="/Contact">Contact</Link>
             </li>
