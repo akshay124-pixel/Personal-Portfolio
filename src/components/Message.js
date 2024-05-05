@@ -42,7 +42,7 @@ const Message = () => {
           style={{
             maxWidth: "400px",
             margin: "0 auto",
-            marginTop: "80px",
+            marginTop: "50px",
             padding: "35px",
             borderRadius: "25px",
             fontFamily: "Arial, sans-serif",
