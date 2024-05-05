@@ -24,7 +24,7 @@ function Navbar() {
       <header className="container">
         <div className="page-header">
           <div className="logo">
-            <Link to="/">Contact</Link>
+            <Link to="/"> Porfolio</Link>
           </div>
           <input type="checkbox" id="click" />
 

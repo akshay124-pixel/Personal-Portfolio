@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import "./Home.css";
 const Message = () => {
   const form = useRef();
 
@@ -42,7 +43,10 @@ const Message = () => {
             maxWidth: "400px",
             margin: "0 auto",
             marginTop: "80px",
+            padding: "35px",
+            borderRadius: "25px",
             fontFamily: "Arial, sans-serif",
+            boxShadow: "0px 0px 10px rgba(0, 0, 00, 0.5)",
           }}
         >
           <label
@@ -55,6 +59,7 @@ const Message = () => {
             Name
           </label>
           <input
+            placeholder="Your Name.."
             type="text"
             name="from_name"
             style={{
@@ -76,6 +81,7 @@ const Message = () => {
             Email
           </label>
           <input
+            placeholder="Your Email.."
             type="email"
             name="from_email"
             style={{
@@ -97,6 +103,7 @@ const Message = () => {
             Message
           </label>
           <textarea
+            placeholder="Your Message"
             name="message"
             type="text"
             style={{
@@ -108,19 +115,25 @@ const Message = () => {
               boxSizing: "border-box",
             }}
           ></textarea>
-          <input
-            type="submit"
-            value="Send"
-            style={{
-              backgroundColor: "#f9532d",
-              color: "white",
-              padding: "14px 20px",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-              fontWeight: "bold",
-            }}
-          />
+          <button type="submit" value="Send">
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    fill="currentColor"
+                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span>Send</span>
+          </button>
         </form>
       </div>
     </>

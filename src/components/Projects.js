@@ -12,7 +12,7 @@ function Projects() {
               <div className="project-column">
                 <div className="project-card">
                   <img
-                    src="project-image-2.jpg" // Replace with your project image
+                    src="" // Replace with your project image
                     alt=""
                     className="project-image"
                   />
