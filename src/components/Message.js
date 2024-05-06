@@ -31,7 +31,6 @@ const Message = () => {
           className="Heading"
           style={{ textAlign: "center", marginTop: "50px" }}
         >
-          {" "}
           Message Box
         </h1>
 
@@ -105,7 +104,6 @@ const Message = () => {
           <textarea
             placeholder="Your Message"
             name="message"
-            type="text"
             style={{
               width: "100%",
               padding: "10px",
@@ -116,8 +114,8 @@ const Message = () => {
             }}
           ></textarea>
           <button type="submit" value="Send">
-            <div class="svg-wrapper-1">
-              <div class="svg-wrapper">
+            <div className="svg-wrapper-1">
+              <div className="svg-wrapper">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"

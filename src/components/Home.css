@@ -541,4 +541,19 @@ button:active {
         transform: translate(-100%, -100%) translate3d(0, 0, 0);
     }
 }
+/* Center the image of Contact */
+@media only screen and (max-width: 768px) {
+    .img-sec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
 
+    .img-sec .images1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

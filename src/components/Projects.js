@@ -1,7 +1,7 @@
 import React from "react";
-
 import "./Home.css";
 import "./button.css";
+
 function Projects() {
   return (
     <div>
@@ -12,7 +12,7 @@ function Projects() {
               <div className="project-column">
                 <div className="project-card">
                   <img
-                    src="" // Replace with your project image
+                    src="project-image-1.jpg" // Replace with your project image
                     alt=""
                     className="project-image"
                   />
@@ -36,7 +36,7 @@ function Projects() {
                     }
                   >
                     View Project
-                    <div class="icon">
+                    <div className="icon">
                       <svg
                         height="24"
                         width="24"
@@ -56,7 +56,7 @@ function Projects() {
               <div className="project-column">
                 <div className="project-card">
                   <img
-                    src="project-image-1.jpg" // Replace with your project image
+                    src="project-image-2.jpg" // Replace with your project image
                     alt=""
                     className="project-image"
                   />
@@ -77,7 +77,7 @@ function Projects() {
                     }
                   >
                     View Project
-                    <div class="icon">
+                    <div className="icon">
                       <svg
                         height="24"
                         width="24"
@@ -98,7 +98,7 @@ function Projects() {
               <div className="project-column">
                 <div className="project-card">
                   <img
-                    src="project-image-2.jpg" // Replace with your project image
+                    src="project-image-3.jpg" // Replace with your project image
                     alt=""
                     className="project-image"
                   />
@@ -116,11 +116,11 @@ function Projects() {
                     className="cssbuttons-io-button"
                     onClick={() =>
                       (window.location.href =
-                        "https://brand-page-nikee.vercel.app//")
+                        "https://brand-page-nikee.vercel.app/")
                     }
                   >
                     View Project
-                    <div class="icon">
+                    <div className="icon">
                       <svg
                         height="24"
                         width="24"
@@ -140,7 +140,7 @@ function Projects() {
               <div className="project-column">
                 <div className="project-card">
                   <img
-                    src="project-image-2.jpg" // Replace with your project image
+                    src="project-image-4.jpg" // Replace with your project image
                     alt=""
                     className="project-image"
                   />
@@ -162,7 +162,7 @@ function Projects() {
                     }
                   >
                     View Project
-                    <div class="icon">
+                    <div className="icon">
                       <svg
                         height="24"
                         width="24"
@@ -183,11 +183,11 @@ function Projects() {
               <div className="project-column">
                 <div className="project-card">
                   <img
-                    src="project-image-2.jpg" // Replace with your project image
+                    src="project-image-5.jpg" // Replace with your project image
                     alt=""
                     className="project-image"
                   />
-                  <h3>Porfolio Using React</h3>
+                  <h3>Portfolio Using React</h3>
                   <p>
                     Create a stunning personal portfolio with React.js,
                     showcasing our skills and achievements in a dynamic and
@@ -204,7 +204,7 @@ function Projects() {
                     }
                   >
                     View Project
-                    <div class="icon">
+                    <div className="icon">
                       <svg
                         height="24"
                         width="24"
@@ -223,16 +223,6 @@ function Projects() {
               </div>
             </div>
           </div>
-          {/* <div className="img-sec">
-            <div className="images1">
-              <img
-                src="Project.svg"
-                alt=""
-                className="img-w"
-                style={{ position: "fixed" }}
-              />
-            </div>
-          </div> */}
         </div>
       </section>
     </div>

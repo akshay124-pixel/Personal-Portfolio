@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem("darkMode") === "enabled"
@@ -19,33 +20,49 @@ function Navbar() {
     setIsDarkMode(!isDarkMode);
   };
 
+  const handleNavClick = () => {
+    if (window.innerWidth <= 768) {
+      document.getElementById("click").checked = false;
+    }
+  };
+
   return (
     <div>
       <header className="container">
         <div className="page-header">
           <div className="logo">
-            <Link to="/"> Porfolio</Link>
+            <Link to="/" onClick={handleNavClick}>
+              Porfolio
+            </Link>
           </div>
           <input type="checkbox" id="click" />
 
           <label htmlFor="click" className="mainicon">
             <div className="menu">
-              <i className={isDarkMode ? "bx bxs-sun" : "bx bx-menu"}></i>
+              <i className="bx bx-menu"></i>
             </div>
           </label>
           <ul>
             <li>
-              <Link to="/Home">Home</Link>
+              <Link to="/Home" onClick={handleNavClick}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/Projects">Projects</Link>
+              <Link to="/Projects" onClick={handleNavClick}>
+                Projects
+              </Link>
             </li>
             <li>
-              <Link to="/Skills">Skills</Link>
+              <Link to="/Skills" onClick={handleNavClick}>
+                Skills
+              </Link>
             </li>
 
             <li>
-              <Link to="/Contact">Contact</Link>
+              <Link to="/Contact" onClick={handleNavClick}>
+                Contact
+              </Link>
             </li>
           </ul>
           <label className="mode">
@@ -55,7 +72,7 @@ function Navbar() {
               checked={isDarkMode}
               onChange={toggleDarkMode}
             />
-            <i className={isDarkMode ? "bx bxs-sun" : "bx bxs-moon"}></i>
+            <i className={isDarkMode ? "bx bxs-sun" : "bx bxs-moon"} />
           </label>
         </div>
       </header>
